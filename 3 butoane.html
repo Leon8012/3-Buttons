@@ -18,9 +18,16 @@
             <div class="card text-center">
               <button type="button" class="btn btn-danger btn-lg btn-block" id="1" onclick="return chooseButon(this.id);">Button 1</button>
               <button type="button" class="btn btn-warning btn-lg btn-block" id="2" onclick="return chooseButon(this.id);">Button 2</button>
-              <button type="button" class="btn btn-primary btn-lg btn-block" id="3" onclick="return chooseButon(this.id);">Button 3 </button>
+              <button type="button" class="btn btn-primary btn-lg btn-block" id="3" onclick="return chooseButon(this.id);">Button 3 </button>   
             </div>
           </div>
+          <div class="card">
+              <div class="card-body">
+                <img src="img.png" width="150" class="card-img-center">
+                <div class="card-body">
+                  <div id="displayme"></div>
+                </div>
+              </div>
         </div>        
       </div>
     </div>
@@ -34,9 +41,9 @@
         var randomNumber;
         randomNumber = Math.floor(Math.random() * 3) + 1;
         if (id == randomNumber) {
-          alert("It's your lucky day, you should get a loto ticket :)");
+          $("#displayme").html("It's your lucky day, you should get a loto ticket :)");
         } else {
-          alert("Wrong button, don't give up !");
+          $("#displayme").html("Wrong button, don't give up !");
         }     
       }
     </script>
